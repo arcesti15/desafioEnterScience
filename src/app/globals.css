@@ -1,0 +1,9 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background: linear-gradient(135deg, #c2c2d6, #323232);
+    font-family: var(--font-roboto);
+}

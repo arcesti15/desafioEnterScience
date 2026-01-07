@@ -1,0 +1,62 @@
+.link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: rgb(96, 96, 96);
+    transform: translateX(4px);
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.modalDialog {
+    background-color: #333; /* Fundo mais escuro para o modal */
+    border-radius: 10px;  /* Bordas arredondadas */
+}
+
+.modalHeader, .modalFooter {
+    background-color: #444;  /* Fundo mais escuro para o cabeçalho e rodapé */
+    border-bottom: 1px solid #555;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modalFooter {
+    border-top: 1px solid #555;
+}
+
+/* Botão de fechar */
+.modalHeader .close {
+    color: #fff;  /* Cor do botão de fechar */
+}
+
+.modalBody {
+    background-color: #222;  /* Cor de fundo para o corpo do modal */
+    padding: 2rem;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
