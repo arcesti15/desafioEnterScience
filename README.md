@@ -1,10 +1,9 @@
 Este é um site desenvolvido para vaga enterscience.
 
 Tecnologias utilizadas:
--> Nest.js
 -> React.js
 -> React-Bootstrap
--> Node.js
+-> Php - Laravel
 -> API do spotfy para acesso aos dados de artistas e bandas (todo o conteudo é consumido dessa API)
 
 A tela inicial (raiz: "/") contém uma barra de navegação (navbar) que acompanha o layout de todo o projeto, com dois links: Início e Contratações.
@@ -17,7 +16,7 @@ A tela inicial (raiz: "/") contém uma barra de navegação (navbar) que acompan
 
 Para rodar a aplicação:
 
-Clone o repositório do meu GitHub: https://github.com/arcesti/desafioEnterScience.
+Clone o repositório do meu GitHub: https://github.com/arcesti15/desafioEnterScience.
 
 Dentro da pasta do projeto, instale as dependências executando o comando npm install.
 

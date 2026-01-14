@@ -6,44 +6,60 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BsSearch } from "react-icons/bs";
 import SpotifySearch from './resultSearch';
+import styles from './style/navbar.module.css';
 
 function NavBar() {
   // State to hide or show input
   const [showInput, setShowInput] = useState(false);
+  
   return (
-    <Navbar expand="md" bg="dark" data-bs-theme="dark" className="px-3">
-      <Container >
-        <Navbar.Brand href="/">Show Time</Navbar.Brand>
-        <div className="d-md-none d-flex me-auto">
-          <p style={{ color: "#fff" }}>Busque por um artista ou banda</p>
+    <Navbar expand="md" className={styles.navbar}>
+      <Container>
+        <Navbar.Brand href="/" className={styles.brand}>
+          Show Time
+        </Navbar.Brand>
+        
+        <div className="d-md-none d-flex align-items-center gap-2">
+          {!showInput && (
+            <p className={styles.searchText}>Busque por um artista</p>
+          )}
           <BsSearch
             size={20}
-            className="text-white cursor-pointer"
+            className={styles.searchIcon}
             onClick={() => setShowInput(!showInput)}
           />
-          {showInput && (
-            <SpotifySearch />
-          )}
         </div>
-        <Navbar.Toggle aria-controls="navbar-nav" />
+        
+        {showInput && (
+          <div className="d-md-none w-100 mt-2">
+            <SpotifySearch />
+          </div>
+        )}
+        
+        <Navbar.Toggle aria-controls="navbar-nav" className={styles.toggler} />
 
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Início</Nav.Link>
-            <Nav.Link href="/contratacoes">Contratações</Nav.Link>
+            <Nav.Link href="/" className={styles.navLink}>
+              Início
+            </Nav.Link>
+            <Nav.Link href="/contratacoes" className={styles.navLink}>
+              Contratações
+            </Nav.Link>
           </Nav>
-          <div className="d-none d-md-flex align-items-center">
-            {
-              !showInput && 
-            <p className='d-flex m-2' style={{ color: "#fff" }}>Busque por um artista ou banda</p>
-            }
+          
+          <div className="d-none d-md-flex align-items-center gap-3">
+            {!showInput && (
+              <p className={styles.searchText}>Busque por um artista ou banda</p>
+            )}
             {showInput && (
-              <SpotifySearch />
+              <div className={styles.searchWrapper}>
+                <SpotifySearch />
+              </div>
             )}
             <BsSearch
-              style={{ minWidth: "20px", minHeight: "20px" }}
               size={20}
-              className="text-white cursor-pointer"
+              className={styles.searchIcon}
               onClick={() => setShowInput(!showInput)}
             />
           </div>

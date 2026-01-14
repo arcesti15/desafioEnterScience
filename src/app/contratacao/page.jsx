@@ -1,19 +1,10 @@
-"use client"
-import { useSearchParams } from "next/navigation";
-import CardArtista from "./components/cardArtista";
+import { Suspense } from "react";
+import ArtistaClient from "./artistaClient";
 
-export default function Artista() {
-    const searchParams = useSearchParams();
-    const name = searchParams.get("name");
-    const genre = searchParams.get("genre");
-    const popularity = searchParams.get("popularity");
-    const image = searchParams.get("image");
-    const artista = { name, genre, popularity, image};
-    return (
-        <>
-            <CardArtista artista={artista}>
-
-            </CardArtista>
-        </>
-    );
+export default function ContratacaoPage() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <ArtistaClient />
+    </Suspense>
+  );
 }

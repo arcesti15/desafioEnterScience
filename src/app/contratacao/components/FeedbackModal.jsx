@@ -8,7 +8,7 @@ export default function FeedbackModal({ show, onClose }) {
                 <Modal.Title>Contratação Realizada!</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <p>Sua contratação foi realizada. Entraremos em contato em breve!</p>
+                <p style={{color: "black"}}>Sua contratação foi realizada. Entraremos em contato em breve!</p>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="primary" onClick={onClose}>
